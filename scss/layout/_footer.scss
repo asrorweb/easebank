@@ -1,0 +1,102 @@
+// footer
+/*======= footer ==========*/
+.footer {
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+    background-color: #2d314d;
+
+    @include responsive(mobile) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3.2rem;
+
+        @include responsive(mobile) {
+            justify-content: center;
+        }
+    }
+
+    &__logo--box {
+        .site__logo {
+            margin-bottom: 5.5rem;
+
+            @include responsive(mobile) {
+                margin-bottom: 3.2rem;
+            }
+        }
+    }
+
+    &__social--list {
+        display: flex;
+        align-items: center;
+        gap: 1.33rem;
+    }
+
+    &__social--link {
+        &:hover {
+            svg path {
+                fill: $color-30C88F;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        @include responsive(tablet) {
+            flex-wrap: wrap;
+        }
+
+        @include responsive(mobile) {
+            text-align: center;
+            gap: 0;
+            .footer__nav--item:not(:last-child) {
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+
+    &__nav--list {
+        width: 160px;
+
+        @include responsive(tablet) {
+            max-width: 160px;
+            width: 100%;
+        }
+    }
+
+    &__nav--link {
+        @include font(100, 1.5rem, 2.6rem, -0.23px);
+        color: $text-color;
+
+        &:hover {
+            @include navLinkHover($color-30C88F);
+        }
+    }
+
+    &__btn--box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__btn {
+        margin-bottom: 2.4rem;
+        margin-left: auto;
+
+        @include responsive(tablet) {
+            margin-inline: auto;
+        }
+    }
+
+    &__btn--description {
+        @include font(100, 1.5rem, 2.6rem, -0.23px);
+    }
+}

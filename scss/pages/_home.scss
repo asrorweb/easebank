@@ -1,0 +1,207 @@
+// home page hero section
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: $bg-color-f2f2f2;
+    @include responsive(tablet) {
+        text-align: center;
+        padding-bottom: 8.8rem;
+    }
+
+    @include responsive(mobile) {
+        align-items: flex-end;
+    }
+
+    &__content--box {
+        position: relative;
+        max-width: 447px;
+        width: 100%;
+        z-index: $z-index-header-60;
+
+        @include responsive(tablet) {
+            margin-inline: auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+
+        @include responsive(tablet) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__description {
+        @include font(100, 1.8rem, 2.8rem, -0.28px);
+        margin-bottom: 3.6rem;
+
+        @include responsive(tablet) {
+            @include font(100, 1.5rem, 2.5rem, -0.23px);
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__img--1,
+    &__img--2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 100%;
+        z-index: 1;
+
+        @include responsive(maxwidth_1100px) {
+            width: 500px;
+        }
+
+        @include responsive(maxwidth_970px) {
+            width: 400px;
+        }
+
+        @include responsive(tablet) {
+            display: none;
+        }
+    }
+
+    &__img--2 {
+        z-index: 0;
+    }
+
+    &__img--3 {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        @include responsive(mobile) {
+            display: block;
+        }
+    }
+}
+
+// <!-- Why easebank -->
+.answer-info {
+    padding-top: 9.6rem;
+    padding-bottom: 9.4rem;
+    background-color: $bg-color-f4f5f7;
+
+    @include responsive(mobile) {
+        padding-top: 6.4rem;
+        padding-bottom: 6.4rem;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 1.6rem;
+    }
+
+    &__description {
+        @include font(100, 1.8rem, 1.56, -0.28125px);
+        margin-bottom: 7.2rem;
+    }
+
+    &__list {
+        @include displayGrid(230px, 1fr, 3rem, 3.2rem);
+    }
+
+    &__img {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 4rem;
+
+        @include responsive(mobile) {
+            margin-bottom: 2.4rem;
+            margin-inline: auto;
+        }
+    }
+
+    &__item__title {
+        margin-bottom: 2.6rem;
+
+        @include responsive(mobile) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__item__description {
+        @include font(100, 1.6rem, 2.6rem, -0.25px);
+
+        @include responsive(mobile) {
+            @include font(100, 1.5rem, 2.5rem, -0.23px);
+        }
+    }
+}
+
+// articles
+.articles {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: $bg-color-f2f2f2;
+
+    @include responsive(mobile) {
+        padding-top: 8.8rem;
+        padding-bottom: 8.8rem;
+    }
+
+    &__title {
+        margin-bottom: 4rem;
+
+        @include responsive(mobile) {
+            margin-bottom: 3.1rem;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        @include displayGrid(230px, 1fr, 3rem, 2.4rem);
+    }
+
+    &__item {
+        border-radius: 5px;
+        background-color: $bg-color-white;
+
+        &__img {
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 2.5rem;
+        }
+
+        &__contentBox {
+            padding: 0 2.4rem 2.4rem 2.4rem;
+
+            @include responsive(mobile) {
+                padding: 0 3.1rem 2.4rem 3.1rem;
+            }
+        }
+
+        &__subdescription {
+            @include font(100, 1rem, 1.8rem, -0.16px);
+            margin-bottom: 0.8rem;
+        }
+
+        &__title {
+            @include font(100, 1.6rem, 2rem, -0.29px);
+            margin-bottom: 0.8rem;
+            color: $color-2D314D;
+
+            &:hover {
+                color: $color-30C88F;
+            }
+        }
+
+        &__description {
+            @include font(100, 1.3rem, 1.8rem, -0.2px);
+        }
+    }
+}
+/***************** bg image for  retina screen ***************************/
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+}
